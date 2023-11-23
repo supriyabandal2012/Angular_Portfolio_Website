@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,6 +15,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 @NgModule({
   declarations: [
@@ -39,9 +39,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     NgxExtendedPdfViewerModule,
     ReactiveFormsModule,
+    AccordionModule.forRoot()
+
 
   ],
-  providers: [],
+  providers: [],   //for provideing services
   bootstrap: [AppComponent]
 })
 export class AppModule { }

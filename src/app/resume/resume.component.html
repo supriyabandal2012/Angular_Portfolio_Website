@@ -1,15 +1,179 @@
-<div class="container">
-    <div class="row">
-        <!-- About me tile -->
-        <div class="col-lg-4 col-md-6 mb-4 " style=" max-width:500px; min-width:500px;">
-            <div class="text-center">
-                <h2>My Resume</h2>
-                <p>Click the link below to download my resume:</p>
-                <a href="../../assets/Resume.pdf" download="Resume.pdf">Download Resume</a>
-                <ngx-extended-pdf-viewer [src]="'assets/Resume.pdf'"
-                    style="display: block; width: 200%; height: 600px;"></ngx-extended-pdf-viewer>
+<div class="container text-center">
+    <button (click)="DownloadFile()" class="btn btn-primary mb-5 shadow border">Download PDF Resume</button>
 
+    <div class="pb-2">
+        <accordion [isAnimated]="true" class="shadow">
+            <accordion-group [(isOpen)]="isEducationOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility:hidden;">></div>
+                    <div clas="btn-link ">Education</div>
+                    <div style="width:10.95px;">
+                        <div *ngIf="!isEducationOpen" style="color:white;">></div>
+                        <div *ngIf="isEducationOpen" style="color:white;">v</div>
+                    </div>
+                    
+                </button>
+            <div style="text-align:left;">
+                <h2 class="mb-0">University of Nevada, Reno - May 2024(expected)</h2>
+                <h3 class="text-primary">Master of Computer Science and Engineering GPA: 3.3/4.00</h3>
+                <ul>
+                    <li>Coursework: Analysis of Algorithm, Operating System, Database Management System, Full
+                    Stack,  Cloud Computing (AWS/Azure), Digital Forensics and Cybersecurity, Cryptography and Blockchain, Robotics.</li>
+                </ul>
             </div>
-        </div>
+            <div style="text-align:left;">
+                <h2 class="mb-0">University of Mumbai, India - May 2018</h2>
+                <h3 class="text-primary">Bachelor of Textile Technology GPA: 3.2/4.0</h3>
+                
+            </div>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isWorkExperinceOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility:hidden;">></div>
+                    <div clas="btn-link ">Work Experience</div>
+                    <div style="width:10.95px;">
+                        <div *ngIf="!isWorkExperinceOpen" style="color:white;">></div>
+                        <div *ngIf="isWorkExperinceOpen" style="color:white;">v</div>
+                    </div>    
+                </button>
+            <div style="text-align:left;" >
+                <h2 class="mb-0">Software Intern - Automated Ad Revenue Model</h2>
+                <h3 class="text-primary">Sahayog Apollo - Aug 2023 - Current</h3>
+                <ul>
+                    <li>Developing a Netflix-inspired media streaming ad revenue model using Mongo DB, utilizing Python for scene detection &
+                    metadata, AWS, node.js (backend), Angular(frontend), and Content delivery via a CDN.</li>
+                    <li>Creating dashboard using Tableau, practicing Agile methodology and Scrum, and synchronized projects on GitHub.</li>
+                </ul>
+            </div>
+            <div style="text-align:left;">
+                <h2 class="mb-0">Teaching Assistant - Computer Organisation</h2>
+                <h3 class="text-primary">University of Reno, Nevada -Aug 2023 - Current</h3>
+                <ul>
+                    <li>Assisting Professor in ‘Computer Organization’, facilitating concepts like Load, Store, brunch, CPU & GPU function
+                    using C++.</li>
+                    <li>Collaborating with Ph.D. leveraging codes in Robotics Lab, developed HRA using ‘Reinforcement Queue Learning Model’,
+                    ML/ AI.</li>
+                </ul>
+            </div>
+            <div style="text-align:left;">
+                <h2 class="mb-0">DP Analyst Manager/ Supply Chain Manager- Mumbai, India</h2>
+                <h3 class="text-primary">Reliance Industries Limited -Sept 2021 - Aug 2022</h3>
+                <ul>
+                    <li>Streamlined data analysis & optimized inventory for 5 Sales divisions using integrated SAP, SNP, Tableau and
+                    Production integrated data using Advance Excel database dashboards for 3 plants.</li>
+                    <li>Analyzed product database using Tableau, created SPC capacity of product and increased capacity efficiency by 20%</li>
+                    <li>Standardized production planning documentation for “E-commerce Aspen-Tech” improving product allocation efficiency by
+                    25%.</li>
+                </ul>
+            </div>
+            <div style="text-align:left;">
+                <h2 class="mb-0">Technical Engineering Manager- Silvassa, India</h2>
+                <h3 class="text-primary">Reliance Industries Limited -Dec 2018 - Aug 2021</h3>
+                <ul>
+                    <li>Performed data analysis with Aspen-Tech using time series analysis and analyzed trend patterns using excel and created
+                    FMEA.</li>
+                    <li>Led a team of 6 PM, optimized the production and created SOP, reduced production delays & ramp-up production rate by
+                    25%.</li>
+                    <li>Identified production bottlenecks using 5 Why, managed $135k “Utility Mass Balance Model” and reduced WIP by
+                    allocation.</li>
+                </ul>
+            </div>
+            <div style="text-align:left;">
+                <h2 class="mb-0">Graduate Engineering Trainee- Surat, India</h2>
+                <h3 class="text-primary">Reliance Industries Limited -July 2018 - Nov 2018</h3>
+                <ul>
+                    <li>Collaborated with cross-functional training teams in Robotics, automation, and mechanical for improving supply chain
+                    areas.</li>
+                </ul>
+            </div>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isSkillOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility:hidden;">></div>
+                    <div clas="btn-link ">Skills</div>
+                    <div style="width:10.95px;">
+                        <div *ngIf="!isSkillOpen" style="color:white;">></div>
+                        <div *ngIf="isSkillOpen" style="color:white;">v</div>
+                    </div>
+                </button>
+                <div class="row" style="text-align:left;">
+                    <div class="col">
+                    <h3 >Programming Language:</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>JavaScript</li> 
+                        <li>Java</li>
+                        <li>HTML</li>
+                        <li>CSS</li> 
+                        <li>Elixir</li>
+                    </ul>
+                    </div>
+                    <div class="col">
+                    <h3>Frameworks:</h3>
+                    <ul>
+                        <li>Angular</li>
+                        <li>React</li>
+                        <li>Phoenix</li>
+                    </ul>
+                    </div>
+                    <div class="col">
+                    <h3 >Other Skills and Tools:</h3>
+                    <ul>
+                        <li>Minitab </li>
+                        <li>Tableau</li>
+                        <li>AWS- Lambda, Rekognition</li>
+                        <li>SAP ERP</li>
+                        <li>Version Controls via Git</li>
+                        <li>Agile Developement</li>
+                    </ul>
+                    </div>
+                </div>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isProjectOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility:hidden;">></div>
+                    <div clas="btn-link ">Projects</div>
+                    <div style="width:10.95px;">
+                        <div *ngIf="!isProjectOpen" style="color:white;">></div>
+                        <div *ngIf="isProjectOpen" style="color:white;">v</div>
+                    </div>
+                </button>
+            <div style="text-align:left;">
+                <h2 class="mb-0">Portfolio Website</h2>
+                <h4 >Tools: Angular, HTML, Typescript, NGX-Bootstrap and Vision Control</h4>
+                <ul>
+                    <li>Created portfolio website using Angular & Node.JS, utilized modal, pdf viewer, collapse & reactive forms offer a
+                    static interface.</li>
+                </ul>
+            </div>
+            <div style="text-align:left;">
+                <h2 class="mb-0">AWS Rekognition</h2>
+                <h4 >Tools: Python, Boto3, Cloud EC2 instances, ML Rekognition API, Lambda, JSON, FaaS, SaaS, IaaS</h4>
+                <ul>
+                    <li> Developed image recognition pipeline using AWS function-as-a-service, detects car object and text by reviewing images
+                    in S3 and communicated with SQS for detection and stores files in texts.</li>
+                </ul>
+            </div>
+            <div style="text-align:left;">
+                <h2 class="mb-0">Profile Creation</h2>
+                <h4 >Tools: - HTML, CSS, Flask, Docker</h4>
+                <ul>
+                    <li> Developed personalized profile using Flask Web in HTML, utilized web development and CSS.</li>
+                    <li> Deployed and hosted website on Heroku platform, ensuring excellent accessibility and availability to the global
+                    audience.</li>
+                </ul>
+            </div>
+            <div style="text-align:left;">
+                <h2 class="mb-0">Store Manager</h2>
+                <h4 >Tools: - Phoenix Framework, Elixir, HTML, Json, Tailwind CSS, SQL, Version Control</h4>
+                <ul>
+                    <li>Developed dual-interface application using Phoenix Framework and Elixir for HR & Store dashboards, inserted login
+                    authentication, employee’s entry using SQL and created inventory dashboard.</li>
+                    <li>Managed pricing, vendor allocation and collaborated with HR to view database access, normalized database for
+                    allocations.</li>
+                </ul>
+            </div>
+            </accordion-group>
+        </accordion>
     </div>
 </div>
