@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
 
+please checkout the website hosted on Netlify.com - (https://supriya-bandal-bio.netlify.app/)
+
 ![image](https://github.com/supriyabandal2012/Angular_Portfolio_Website/assets/114032075/6dd96cd5-8669-467c-b958-ecdc421f8ffa)
 
 
