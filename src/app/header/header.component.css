@@ -2,3 +2,14 @@
     padding: 2rem 1rem;
     background-color: #e9ecef;
 }
+.logo{
+    display: flex;
+    position: fixed;
+    top: 120px;
+    right: 40px;
+}
+.logo img{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
